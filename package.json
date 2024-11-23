@@ -1,0 +1,30 @@
+{
+  "name": "learn-makebabel",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "npm run build && node ./build/app.js",
+    "start:dev": "nodemon --exec babel-node ./app.js",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./app.js -s",
+    "build": "npm run clean && npm run build-babel"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": "",
+  "dependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.26.0",
+    "@babel/plugin-transform-runtime": "^7.25.9",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/runtime": "^7.26.0",
+    "nodemon": "^3.1.7"
+  }
+}
